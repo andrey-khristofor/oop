@@ -1,0 +1,13 @@
+C:\Users\Andrey\Desktop\ООП Христофор\z2\bin\Debug\netcoreapp3.1\z2.exe
+C:\Users\Andrey\Desktop\ООП Христофор\z2\bin\Debug\netcoreapp3.1\z2.deps.json
+C:\Users\Andrey\Desktop\ООП Христофор\z2\bin\Debug\netcoreapp3.1\z2.runtimeconfig.json
+C:\Users\Andrey\Desktop\ООП Христофор\z2\bin\Debug\netcoreapp3.1\z2.runtimeconfig.dev.json
+C:\Users\Andrey\Desktop\ООП Христофор\z2\bin\Debug\netcoreapp3.1\z2.dll
+C:\Users\Andrey\Desktop\ООП Христофор\z2\bin\Debug\netcoreapp3.1\z2.pdb
+C:\Users\Andrey\Desktop\ООП Христофор\z2\obj\Debug\netcoreapp3.1\z2.csprojAssemblyReference.cache
+C:\Users\Andrey\Desktop\ООП Христофор\z2\obj\Debug\netcoreapp3.1\z2.AssemblyInfoInputs.cache
+C:\Users\Andrey\Desktop\ООП Христофор\z2\obj\Debug\netcoreapp3.1\z2.AssemblyInfo.cs
+C:\Users\Andrey\Desktop\ООП Христофор\z2\obj\Debug\netcoreapp3.1\z2.csproj.CoreCompileInputs.cache
+C:\Users\Andrey\Desktop\ООП Христофор\z2\obj\Debug\netcoreapp3.1\z2.dll
+C:\Users\Andrey\Desktop\ООП Христофор\z2\obj\Debug\netcoreapp3.1\z2.pdb
+C:\Users\Andrey\Desktop\ООП Христофор\z2\obj\Debug\netcoreapp3.1\z2.genruntimeconfig.cache
