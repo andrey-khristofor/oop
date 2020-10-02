@@ -48,6 +48,13 @@ namespace z3new
             }
             else Console.WriteLine("Inquiry is incorrect");
         }
+        public void PrintCurrency()
+        {
+            foreach (KeyValuePair<string, double> keyValue in Currency)
+            {
+                Console.WriteLine(keyValue.Key + " - " + keyValue.Value);
+            }
+        }
     }
     class Program
     {
@@ -66,6 +73,7 @@ namespace z3new
             Console.WriteLine(conv.Convert("UAH", "USD", 100));
             conv.PrintConverted("EUR", "JPY", 1);
             conv.PrintConverted("incorrect", "inquiry", 1);
+            conv.PrintCurrency();
         }
     }
 }
