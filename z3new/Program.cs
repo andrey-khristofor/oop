@@ -13,7 +13,7 @@ namespace z3new
     {
         Dictionary<string, double> Currency = new Dictionary<string, double>
         {
-            {"uah" , 1}
+            {"UAH" , 1}
         };
         public void AddCurrency(string CurrencyName, double CurrencyValue)
         {
