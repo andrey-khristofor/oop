@@ -62,6 +62,7 @@ namespace z3new
             conv.ChangeCurrency("PLN", 7.42);
             conv.DeleteCurrency("CZK");
             
+            
             Console.WriteLine(conv.Convert("UAH", "USD", 100));
             conv.PrintConverted("EUR", "JPY", 1);
             conv.PrintConverted("incorrect", "inquiry", 1);
