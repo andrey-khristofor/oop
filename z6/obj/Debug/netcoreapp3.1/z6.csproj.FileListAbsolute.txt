@@ -1,0 +1,14 @@
+C:\Users\Andrey\Desktop\ООП Христофор\z6\bin\Debug\netcoreapp3.1\z6.exe
+C:\Users\Andrey\Desktop\ООП Христофор\z6\bin\Debug\netcoreapp3.1\z6.deps.json
+C:\Users\Andrey\Desktop\ООП Христофор\z6\bin\Debug\netcoreapp3.1\z6.runtimeconfig.json
+C:\Users\Andrey\Desktop\ООП Христофор\z6\bin\Debug\netcoreapp3.1\z6.runtimeconfig.dev.json
+C:\Users\Andrey\Desktop\ООП Христофор\z6\bin\Debug\netcoreapp3.1\z6.dll
+C:\Users\Andrey\Desktop\ООП Христофор\z6\bin\Debug\netcoreapp3.1\z6.pdb
+C:\Users\Andrey\Desktop\ООП Христофор\z6\obj\Debug\netcoreapp3.1\z6.Form1.resources
+C:\Users\Andrey\Desktop\ООП Христофор\z6\obj\Debug\netcoreapp3.1\z6.csproj.GenerateResource.cache
+C:\Users\Andrey\Desktop\ООП Христофор\z6\obj\Debug\netcoreapp3.1\z6.AssemblyInfoInputs.cache
+C:\Users\Andrey\Desktop\ООП Христофор\z6\obj\Debug\netcoreapp3.1\z6.AssemblyInfo.cs
+C:\Users\Andrey\Desktop\ООП Христофор\z6\obj\Debug\netcoreapp3.1\z6.csproj.CoreCompileInputs.cache
+C:\Users\Andrey\Desktop\ООП Христофор\z6\obj\Debug\netcoreapp3.1\z6.dll
+C:\Users\Andrey\Desktop\ООП Христофор\z6\obj\Debug\netcoreapp3.1\z6.pdb
+C:\Users\Andrey\Desktop\ООП Христофор\z6\obj\Debug\netcoreapp3.1\z6.genruntimeconfig.cache
