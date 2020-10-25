@@ -147,7 +147,7 @@
             this.довідкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -159,7 +159,7 @@
             this.Delete,
             this.DeleteSaved});
             this.File.Name = "File";
-            this.File.Size = new System.Drawing.Size(59, 24);
+            this.File.Size = new System.Drawing.Size(59, 26);
             this.File.Text = "Файл";
             this.File.Click += new System.EventHandler(this.File_Click);
             // 
@@ -194,7 +194,7 @@
             // довідкаToolStripMenuItem
             // 
             this.довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
-            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
             this.довідкаToolStripMenuItem.Text = "Довідка";
             this.довідкаToolStripMenuItem.Click += new System.EventHandler(this.довідкаToolStripMenuItem_Click);
             // 

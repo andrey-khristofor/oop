@@ -28,6 +28,13 @@ namespace Lab1._1
         void DeleteLastRow()
         {
             if (RowNumber < 1) { return; }
+            for (int i = 0; i < ColNumber; i++) 
+            {
+                Name = MakeName(i, RowNumber - 1);
+                FormulaList.Remove(Name);
+                ValueList.Remove(Name);
+                calculate.Vars.Remove(Name);
+            }
             Table.Rows.RemoveAt(RowNumber - 1);
             Table.Refresh();
             RowNumber--;
@@ -38,6 +45,13 @@ namespace Lab1._1
         void DeleteLastCol()
         {
             if (ColNumber < 1) { return; }
+            for (int i = 0; i < RowNumber; i++)
+            {
+                Name = MakeName(ColNumber,i);
+                FormulaList.Remove(Name);
+                ValueList.Remove(Name);
+                calculate.Vars.Remove(Name);
+            }
             Table.Columns.RemoveAt(ColNumber);
             Table.Refresh();
             ColNumber--;
@@ -145,7 +159,6 @@ namespace Lab1._1
                     }
 
                     
-
                     Reset();
                     break;
                 }
@@ -214,6 +227,7 @@ namespace Lab1._1
         {
             IsSaved = false;
             DeleteLastCol();
+            Reset();
         }
 
         private void Table_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -243,6 +257,7 @@ namespace Lab1._1
                     ValueList[Name] = calculate.Evaluate(Expression);
                     Table[e.ColumnIndex, e.RowIndex].Value = ValueList[Name];
                 }
+                
                 Reset();
             }
         }
@@ -322,7 +337,7 @@ namespace Lab1._1
 
         private void довідкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Лабораторна робота №1 \nВиконав студент групи К-25 Христофор Андрій\nВаріант 57\n\nТехнічна довідка:\nПрограма підтримує бінарні операції(+,-,*,/), =,<,>,<=,>=,<>,not,and,or\nДля запису виразу у клітинку достатньо написати його значення або формулу без дорівнює(наприклад \"125\",\"B4 + C7 * E1\")");
+            MessageBox.Show("Лабораторна робота №1 \nВиконав студент групи К-25 Христофор Андрій\nВаріант 57\n\nТехнічна довідка:\nПрограма підтримує бінарні операції(+,-,*,/), =,<,>,<=,>=,<>,not,and,or\nДля запису виразу у клітинку достатньо написати його значення або формулу без дорівнює(наприклад \"125\",\"B4 + C7 * E1\")\n\nТехнічні примітки:\nПри видаленні рядка або стовпчика, значення, які в них зберігаються і використовуються в формулах, змінюються на 0");
         }
 
         private void AddCol_Click(object sender, EventArgs e)
