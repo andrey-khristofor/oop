@@ -1,0 +1,100 @@
+FILE test 1
+Columns :
+4
+Rows :
+5
+Values
+A3 # 51
+B5 # 1
+C3 # 7
+D4 # 6
+Expressions
+B5 # A3 >=C3*C3 and D4*D1=24
+__________
+FILE test 2
+Columns :
+4
+Rows :
+5
+Values
+A3 # 51
+B5 # 1
+C3 # 7
+D4 # 6
+Expressions
+B5 # A3 >=C3*C3 and D4*D1=24
+__________
+FILE Test 3
+Columns :
+4
+Rows :
+5
+Values
+A3 # 51
+B5 # 0
+C3 # 7
+D1 # 0
+D4 # 6
+Expressions
+B5 # A3 >=C3*C3 and D4*D1=24
+__________
+FILE test4
+Columns :
+4
+Rows :
+5
+Values
+A3 # 51
+B5 # 0
+C1 # 15
+C3 # 7
+D1 # 0
+D4 # 6
+Expressions
+B5 # A3 >=C3*C3 and D4*D1=24
+__________
+FILE test5
+Columns :
+4
+Rows :
+5
+Values
+A3 # 51
+B5 # 0
+C1 # 15
+C3 # 7
+D1 # 0
+D4 # 6
+Expressions
+B5 # A3 >=C3*C3 and D4*D1=24
+__________
+FILE test6
+Columns :
+4
+Rows :
+5
+Values
+A3 # 51
+B5 # 0
+C1 # 15
+C3 # 7
+D1 # 0
+D4 # 6
+Expressions
+B5 # A3 >=C3*C3 and D4*D1=24
+__________
+FILE test6
+Columns :
+4
+Rows :
+5
+Values
+A3 # 51
+B5 # 0
+C1 # 15
+C3 # 7
+D1 # 0
+D4 # 6
+Expressions
+B5 # A3 >=C3*C3 and D4*D1=24
+__________
