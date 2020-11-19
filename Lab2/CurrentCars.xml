@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cars>
+  <brand Brand="Honda">
+    <car color="червоний" price="3600" volume="1,4" year="1995" model="Civic" />
+  </brand>
+  <brand Brand="Nissan">
+    <car color="синій" price="5000" volume="2,5" year="1998" model="Skyline" />
+  </brand>
+  <brand Brand="Nissan">
+    <car color="червоний" price="7500" volume="2" year="1990" model="200SX" />
+  </brand>
+</cars>

@@ -8,22 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Xsl;
+using System.Diagnostics;
 
 namespace Lab2
 {
     public partial class Form1 : Form
     {
-        public string path = @"C:\Users\Andrey\Desktop\ООП Христофор\Lab2.1\XMLCar.xml";
+        private string path = @"C:\Users\Andrey\Desktop\ООП Христофор\Lab2\XMLCar.xml";
+        private string xslPath = @"C:\Users\Andrey\Desktop\ООП Христофор\Lab2\Car.xsl";
+        string fXML = @"C:\Users\Andrey\Desktop\ООП Христофор\Lab2\CurrentCars.xml";
+        string fHTML = @"C:\Users\Andrey\Desktop\ООП Христофор\Lab2\out.html";
         Dictionary<string, SortedSet<string>> modelList = new Dictionary<string, SortedSet<string>>();
+        List<Car> list = new List<Car>();
         public Form1()
         {
             InitializeComponent();
             GetAllCars();
             Model.Enabled = false;
             ModelCheck.Enabled = false;
+            Dom.Checked = true;
         }
         
-        public void GetAllCars()
+        private void GetAllCars()
         {
             string currBrand;
             XmlDocument doc = new XmlDocument();
@@ -90,12 +97,78 @@ namespace Lab2
             return car;
         }
 
+        private void CreateXML()
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(fXML);
+            XmlElement root = doc.DocumentElement;
+            root.RemoveAll();
+
+            foreach (Car car in list)
+            {
+                XmlElement x = doc.DocumentElement;
+                XmlElement c = doc.CreateElement("brand");
+                XmlAttribute a = doc.CreateAttribute("Brand");
+                XmlText t = doc.CreateTextNode(car.brand);
+
+                XmlElement s = doc.CreateElement("car");
+
+
+                XmlAttribute b = doc.CreateAttribute("color");
+                XmlText y = doc.CreateTextNode(car.color);
+                b.AppendChild(y);
+                s.Attributes.Append(b);
+
+                b = doc.CreateAttribute("price");
+                y = doc.CreateTextNode(car.price);
+                b.AppendChild(y);
+                s.Attributes.Append(b);
+
+                b = doc.CreateAttribute("volume");
+                y = doc.CreateTextNode(car.volume);
+                b.AppendChild(y);
+                s.Attributes.Append(b);
+
+                b = doc.CreateAttribute("year");
+                y = doc.CreateTextNode(car.year);
+                b.AppendChild(y);
+                s.Attributes.Append(b);
+
+                b = doc.CreateAttribute("model");
+                y = doc.CreateTextNode(car.model);
+                b.AppendChild(y);
+                s.Attributes.Append(b);
+
+                c.AppendChild(s);
+
+                a.AppendChild(t);
+                c.Attributes.Append(a);
+                x.AppendChild(c);
+            }
+            doc.Save(fXML);
+        }
+
         private void Find_Click(object sender, EventArgs e)
         {
-            LINQtoXML d = new LINQtoXML();
+            IStrategy strategy = new DOM(path);
             CarSearch c = FindParams();
-            List<Car> list = d.Search(c);
+
+            if (Dom.Checked == true)
+            {
+                strategy = new DOM(path);
+            }
+            if (Sax.Checked == true)
+            {
+                strategy = new SAX(path);
+            }
+            if (Linq.Checked == true)
+            {
+                strategy = new LINQtoXML(path);
+            }
+
+            list = strategy.Search(c);
             PrintInfo(list);
+            CreateXML();
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -116,6 +189,8 @@ namespace Lab2
             ColorCheck.Checked = false;
             PriceCheck.Checked = false;
             VolumeCheck.Checked = false;
+            Model.Enabled = false;
+            ModelCheck.Enabled = false;
         }
 
         private void Brand_TextUpdate(object sender, EventArgs e)
@@ -138,6 +213,21 @@ namespace Lab2
                 Model.Items.Clear();
             }
         }
+
+        private void TransformToHTML()
+        {
+            XslCompiledTransform xslCompiledTransform = new XslCompiledTransform();
+            xslCompiledTransform.Load(xslPath);
+            xslCompiledTransform.Transform(fXML, fHTML);
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem.Name == "trans")
+            {
+                TransformToHTML();
+            }
+            else MessageBox.Show("Лабораторна робота №2\nВиконав студент групи К-25\nХристофор Андрій");
+        }
     }
-    
 }

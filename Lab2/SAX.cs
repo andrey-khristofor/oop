@@ -8,11 +8,16 @@ namespace Lab2
 {
     class SAX : IStrategy
     {
+        string path;
+        public SAX(string _path)
+        {
+            path = _path;
+        }
         public List<Car> Search(CarSearch c)
         {
             List<Car> result = new List<Car>();
 
-            var reader = new XmlTextReader(@"C:\Users\Andrey\Desktop\ООП Христофор\Lab2.1\XMLCar.xml");
+            var reader = new XmlTextReader(path);
 
             string currBrand = "";
             while (reader.Read())

@@ -8,13 +8,18 @@ namespace Lab2
 {
     class DOM : IStrategy
     {
+        string path;
+        public DOM(string _path)
+        {
+            path = _path;
+        }
         public List<Car> Search(CarSearch c)
         {
             string currentBrand;
             List<Car> result = new List<Car>();
 
             XmlDocument doc = new XmlDocument();
-            doc.Load(@"C:\Users\Andrey\Desktop\ООП Христофор\Lab2.1\XMLCar.xml");
+            doc.Load(path);
             XmlElement root = doc.DocumentElement;
             
 

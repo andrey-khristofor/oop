@@ -11,11 +11,16 @@ namespace Lab2
 {
     class LINQtoXML : IStrategy
     {
+        string path;
+        public LINQtoXML(string _path)
+        {
+            path = _path;
+        }
         public List<Car> Search(CarSearch c)
         {
             List<Car> result = new List<Car>();
 
-            XDocument doc = XDocument.Load(@"C:\Users\Andrey\Desktop\ООП Христофор\Lab2.1\XMLCar.xml");
+            XDocument doc = XDocument.Load(path);
             var cars = from obj in doc.Descendants("car")
                        select new
                        {

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andrey\\Desktop\\ООП Христофор\\Lab2.1\\Lab2.csproj",
+      "projectUniqueName": "C:\\Users\\Andrey\\Desktop\\ООП Христофор\\Lab2\\Lab2.csproj",
       "projectName": "Lab2",
-      "projectPath": "C:\\Users\\Andrey\\Desktop\\ООП Христофор\\Lab2.1\\Lab2.csproj",
+      "projectPath": "C:\\Users\\Andrey\\Desktop\\ООП Христофор\\Lab2\\Lab2.csproj",
       "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andrey\\Desktop\\ООП Христофор\\Lab2.1\\obj\\",
+      "outputPath": "C:\\Users\\Andrey\\Desktop\\ООП Христофор\\Lab2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
